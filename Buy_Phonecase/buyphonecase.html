@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+
+    <div class="image-container">
+    <img src="../image/Logo-22.png" class="float-left">
+    </div>
+    <div class="logo-container">
+      <img src="../image/Home Kong Logo-22.png" class="float-left">
+    </div>
+
+    <div class="dropdown">
+      <img src="../image/588a6507d06f6719692a2d15.png" width="7%" height="7%">
+        <div class="dropdown-content">
+          <a href="../index.html">Home</a>
+          <a href="../Make_Your_Film/makeyourfilm.html">Make Your Film</a>
+          <a href="../Share_Your_Identity/shareyouridentity.html">Share Your Identity</a>
+          <a href="../Print_Your_Merch/printyourtmerch.html">Print Your Merch</a>
+        </div>
+    </div>
+  </head>
+
+  <body>
+        <div class="container">
+      <img src="../image/collage-13.png" alt="print" style="width:100%;">
+      <div class="content">
+        <h1>PRINT YOUR T-SHIRT</h1>
+        <h2>What you wear can reflect your personality and identity. Printing your unique QR pattern on a merchandise will allow you to physically show your Hong Kong recognition.
+        <br>
+        <br>
+          You can choose from different styles and colors. There are three styles available - Phone Case, Plain T-shirt and T-shirt with Pocket. There is also a variety of colours you can choose from.</h2>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+<div class="row">
+  
+<div class="column1">
+    <div class="container2">
+    <label for="cars">Choose Your Style:</label>
+    <br>
+    <select name="cars" id="cars">
+      <option value="saab">Hard Phone Case</option>
+      <option value="opel">Silicone Phone Case</option>
+    </select>
+<br>
+<br>
+<br>
+<br>
+    <label for="cars">Choose Your Size:</label>
+    <br>
+    <select name="cars" id="cars">
+      <option value="opel">IPhone</option>
+      <option value="opel">Pixel</option>
+      <option value="opel">Galaxy</option>
+      <option value="opel">OnePlus</option>
+    </select>
+<br>
+<br>
+<br>
+<br>
+    <label for="cars">Choose Your Color:</label>
+    <br>
+    <select name="cars" id="cars">
+      <option value="volvo">Red</option>
+      <option value="saab">Black</option>
+      <option value="opel">Blue</option>
+      <option value="opel">Yellow</option>
+      <option value="opel">Orange</option>
+      <option value="opel">White</option>
+      <option value="opel">Green</option>
+      <option value="opel">Purple</option>
+    </select>
+<br>
+<br>
+<br>
+<br>
+
+<div class="upload-btn-wrapper">
+  <button class="btn"  style="width:50%"><img src="../image/upload collage-15.png" style="width:80%"></button>
+  <input type="file" name="myfile" />
+</div>
+  </div>
+</div>
+
+<div class="column1">
+  <div class="carousel-container">
+    <div class="carousel-imgs">
+    <img src="../image/phone case 600-16.png" class="carousel-img visible" style="width:100%;"/>
+    <img src="../image/jen_001_07_X1_0002 600-16.png" class="carousel-img  hidden"style="width:100%"/>
+    <img src="../image/model 600-16.png" class="carousel-img  hidden"style="width:100%"/>
+    <img src="../image/both 600-16.png" class="carousel-img  hidden"style="width:100%"/>
+    </div>
+      <a class="prev arrow">&#10094;</a>
+      <a class="next arrow">&#10095;</a>
+    <div class="slide-numbers">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    
+    <script>
+      // Variables
+  let prev = document.querySelector('.prev');
+  let next = document.querySelector('.next');
+  let imgs = document.querySelectorAll('.carousel-img');
+  let dots = document.querySelectorAll('.dot');
+  let captions = document.querySelectorAll('.carousel-caption')
+  let totalImgs = imgs.length;
+  let imgPosition = 0;
+  
+  // Event Listeners
+  next.addEventListener('click', nextImg);
+  prev.addEventListener('click', prevImg);
+  
+  // Update Position
+  function updatePosition (){
+  //   Images
+    for(let img of imgs){
+      img.classList.remove('visible');
+      img.classList.add('hidden');
+    }
+    imgs[imgPosition].classList.remove('hidden');
+    imgs[imgPosition].classList.add('visible')
+  //   Dots
+    for (let dot of dots) {
+       dot.className = dot.className.replace(" active", "");
+    }
+      dots[imgPosition].classList.add('active');
+  //   Captions
+    for (let caption of captions) {
+        caption.classList.remove('visible');
+        caption.classList.add('hidden');
+    }
+      captions[imgPosition].classList.remove('hidden');
+      captions[imgPosition].classList.add('visible')
+  }
+  
+  // Next Img
+  function nextImg(){
+    if (imgPosition === totalImgs -1){
+          imgPosition = 0;
+      } else{
+          imgPosition++;
+      }
+      updatePosition();
+  }
+  //Previous Image
+  function prevImg(){
+    if (imgPosition === 0){
+          imgPosition = totalImgs-1;
+      } else{
+          imgPosition--;
+      }
+      updatePosition();
+  }
+  
+  // Dot Position
+  dots.forEach((dot, dotPosition) => {
+    dot.addEventListener("click", () => {
+      imgPosition = dotPosition
+      updatePosition(dotPosition)
+    })
+  })
+    </script>
+
+  </div>
+ 
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<br>
+<br>
+<br>
+      <div>
+        <img src="../image/foot-25.png" width="100%" height="100%">
+      </div>
+  </body>
+</html>
